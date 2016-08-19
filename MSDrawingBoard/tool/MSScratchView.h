@@ -1,0 +1,27 @@
+//
+//  MSScratchView.h
+//  MSDrawingBoard
+//
+//  Created by mr.scorpion on 16/5/30.
+//  Copyright © 2016年 mr.scorpion. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface MSScratchView : UIView
+{
+    CGPoint previousTouchLocation;
+    CGPoint currentTouchLocation;
+    
+    CGImageRef hideImage;
+    CGImageRef scratchImage;
+    
+    CGContextRef contextMask;
+}
+@property (nonatomic, assign) float sizeBrush;
+@property (nonatomic, strong) UIView *hideView;
+
+- (void)setHideView:(UIView *)hideView;
+- (UIImage *)getEndImg;
+
+@end
